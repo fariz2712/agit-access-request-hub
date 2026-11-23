@@ -124,7 +124,8 @@ public sealed class RequestService(HubDbContext db, TimeProvider time)
             await db.SaveChangesAsync(ct);
             return (View(request, actor), true);
         }
-        catch (DbUpdateException ex) when (ex.InnerException is SqliteException { SqliteExtendedErrorCode: 2067 })
+        catch (DbUpdateException ex) when (ex.InnerException is SqliteException { SqliteExtendedErrorCode: 2067 } sql
+            && sql.Message.Contains("Requests.RequesterId, Requests.ClientRequestId", StringComparison.Ordinal))
         {
             db.ChangeTracker.Clear();
             var winner = await FindReplay();
