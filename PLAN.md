@@ -104,3 +104,10 @@ Planned commands from repository root include `dotnet tool restore`, `dotnet ef 
 ## Evidence and plan changes
 
 Prepare README for setup and demo, AI_USAGE for actual AI interactions and observed mistakes, REVIEW for findings and verification evidence, and INTEGRITY as an unsigned declaration for the candidate to review and complete. Record departures from this baseline here as implementation proceeds. Application builds, migrations, and tests are pending implementation.
+
+### Phase 1 implementation adjustments
+
+- SQLite's provider-level lock wait is bounded by the command timeout. The API returns a retriable 503 when the timeout is exhausted. This avoids a second automatic retry loop and keeps the caller's original UUID or version available for a deliberate retry.
+- The integration suite uses a save interceptor to synchronize concurrent writers after validation and lookup. A separate test-only SQLite trigger forces audit persistence to fail and checks that the request transaction rolls back.
+- Malformed JSON is handled as a client error in Development. The generated xUnit v2 dependency set was replaced with xUnit v3 after NuGet reported advisories in transitive packages.
+- REVIEW.md records the final verification results and known limitations.
