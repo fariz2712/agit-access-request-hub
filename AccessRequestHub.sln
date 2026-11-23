@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{0E64645D-C554-4330-AEB2-2DA33699CAA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessRequestHub.Api", "backend\AccessRequestHub.Api\AccessRequestHub.Api.csproj", "{5700A521-95C1-4B83-89B6-A227343FD0CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D062A288-ADB2-4EDB-B330-2321BA8A3ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessRequestHub.IntegrationTests", "tests\AccessRequestHub.IntegrationTests\AccessRequestHub.IntegrationTests.csproj", "{DBA9D5D2-873B-4D75-B82B-094CAE235C3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5700A521-95C1-4B83-89B6-A227343FD0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5700A521-95C1-4B83-89B6-A227343FD0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5700A521-95C1-4B83-89B6-A227343FD0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5700A521-95C1-4B83-89B6-A227343FD0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA9D5D2-873B-4D75-B82B-094CAE235C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA9D5D2-873B-4D75-B82B-094CAE235C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA9D5D2-873B-4D75-B82B-094CAE235C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA9D5D2-873B-4D75-B82B-094CAE235C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5700A521-95C1-4B83-89B6-A227343FD0CF} = {0E64645D-C554-4330-AEB2-2DA33699CAA1}
+		{DBA9D5D2-873B-4D75-B82B-094CAE235C3B} = {D062A288-ADB2-4EDB-B330-2321BA8A3ECA}
+	EndGlobalSection
+EndGlobal
